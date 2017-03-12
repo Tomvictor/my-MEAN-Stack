@@ -7,7 +7,7 @@ app.engine('.html', require('ejs').__express);
 
 app.set('views', path.join(__dirname, 'views'));
 
-app.use(express.static(path.join(__dirname + 'public')));
+app.use(express.static('public'));
 app.set('view engine', 'html');
 
 // Dummy users
