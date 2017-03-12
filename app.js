@@ -1,28 +1,35 @@
-var express = require('express');
+var app = require('express');
+var http = require('http').Server(app);
 var path    = require('path');
 
 var app = express();
 
-app.set('views',path.join(__dirname,'views'));
-app.engine('html',require('hogan-express'));
-app.set('view engine','html');
+app.engine('.html', require('ejs').__express);
 
-app.use(express.static(path.join(__dirname,'public')));
-app.set('port',3000);
+app.set('views', path.join(__dirname, 'views'));
 
-var router = express.Router();
+app.use(express.static(path.join(__dirname + 'public')));
+app.set('view engine', 'html');
+
+// Dummy users
+var users = [
+  { name: 'tobi', email: 'tobi@learnboost.com' },
+  { name: 'loki', email: 'loki@learnboost.com' },
+  { name: 'jane', email: 'jane@learnboost.com' }
+];
+
+app.get('/', function(req, res){
+  res.render('users', {
+    users: users,
+    title: "EJS example",
+    header: "Some users"
+  });
+});
 
 
-router.get('/',function(req,res,nest){
-	res.render('index',{});
-    });
- 
-app.use('/',router);
+http.listen(port, function () {
+    // body...
+    console.log('listening to 8080')
+});
 
-
-var server = require('http').createserver(app);
-
-server.listen(app.get('port'),function(){
-	console.log('my express app running on port' + app.get('port'));
-    })
 

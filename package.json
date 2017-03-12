@@ -1,7 +1,7 @@
 {
-  "name": "node-scraps",
+  "name": "node-source",
   "version": "1.0.0",
-  "description": "my example codes",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,14 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/Tomvictor/my-MEAN-Stack.git"
   },
-  "author": "Tomvictor",
+  "author": "tomvictor",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Tomvictor/my-MEAN-Stack/issues"
   },
   "homepage": "https://github.com/Tomvictor/my-MEAN-Stack#readme",
   "dependencies": {
-    "express": "^4.15.2",
-    "hogan.js": "^3.0.2"
+    "express": "^4.15.2"
   }
 }
