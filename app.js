@@ -1,8 +1,7 @@
-var app = require('express');
-var http = require('http').Server(app);
+var express = require('express')
+var app = express() ;
 var path    = require('path');
-
-var app = express();
+var port = 3000
 
 app.engine('.html', require('ejs').__express);
 
@@ -27,9 +26,8 @@ app.get('/', function(req, res){
 });
 
 
-http.listen(port, function () {
-    // body...
-    console.log('listening to 8080')
-});
 
 
+app.listen(port, function () {
+  console.log('Example app listening on port'+ port);
+})
