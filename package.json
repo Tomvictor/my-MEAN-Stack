@@ -1,0 +1,22 @@
+{
+  "name": "node-scraps",
+  "version": "1.0.0",
+  "description": "my example codes",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tomvictor/my-MEAN-Stack.git"
+  },
+  "author": "Tomvictor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tomvictor/my-MEAN-Stack/issues"
+  },
+  "homepage": "https://github.com/Tomvictor/my-MEAN-Stack#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
